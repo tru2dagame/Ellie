@@ -19,7 +19,18 @@
     <article class="{{post_class}}" id="post-{{id}}">
 		
 		<h1><a href="{{url}}">{{title}}</a></h1>
-		<span class="meta">{{date format='YYYY-MM-DD'}} {{#if tags}} {{#tags}} #{{name}} {{/tags}} {{/if}}</span>
+
+		<!-- <span class="meta"> -->
+        <!--   {{date format='YYYY-MM-DD'}} {{#if tags}} {{#tags}} #{{name}} {{/tags}} {{/if}} -->
+        <!-- </span> -->
+
+        <!-- <span class="post-meta"> -->
+        <span class="meta">
+          <time datetime="{{date format='YYYY-MM--DD'}}">{{date format="DD MMM YYYY"}}</time> 
+          {{#if tags}}on {{tags}}{{/if}} 
+          <a href="{{url}}#disqus_thread">Comments</a>
+        </span>
+
 		<p class="summary">{{excerpt}}</p>
     </article>
 
